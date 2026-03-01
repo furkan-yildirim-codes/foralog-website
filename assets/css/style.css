@@ -36,12 +36,12 @@ body {
 }
 
 .navbar nav a:hover {
-    color: #0f172a;
+    color: #f97316;
 }
 
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)),
+    background: linear-gradient(rgba(249,115,22,0.7), rgba(0,0,0,0.6)),
                 url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
     background-size: cover;
     background-position: center;
@@ -64,7 +64,7 @@ body {
 }
 
 .btn {
-    background: #0f172a;
+    background: #f97316;
     color: white;
     padding: 12px 30px;
     text-decoration: none;
@@ -73,7 +73,7 @@ body {
 }
 
 .btn:hover {
-    background: #1e293b;
+    background: #ea580c;
 }
 
 footer {
