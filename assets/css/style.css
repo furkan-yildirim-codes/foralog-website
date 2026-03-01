@@ -127,3 +127,45 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Mobil */
+
+@media (max-width: 900px) {
+
+    .navbar nav {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .navbar nav a {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo {
+        margin: auto;
+    }
+}
