@@ -138,15 +138,19 @@ footer {
         margin: 0 auto;
     }
 
+    .logo img {
+        height: 45px;
+    }
+
     .hamburger {
-        display: block;
+        display: block !important;
         position: absolute;
         left: 20px;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 28px;
+        font-size: 30px;
         color: #1e293b;
-        z-index: 1000;
+        cursor: pointer;
     }
 
     .navbar nav {
@@ -160,6 +164,11 @@ footer {
         text-align: center;
         padding: 20px 0;
         box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .navbar nav a {
+        margin: 15px 0;
+        font-size: 18px;
     }
 
     .navbar nav.active {
@@ -181,4 +190,9 @@ footer {
 
 .navbar nav.active {
     display: flex;
+}
+
+.hamburger {
+    display: block !important;
+    background: red;
 }
