@@ -188,3 +188,31 @@ footer {
 .navbar nav.active {
     display: flex;
 }
+
+@media (max-width: 900px) {
+    .hamburger {
+        display: block !important;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        color: #f97316;
+        z-index: 2000;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+    }
+}
