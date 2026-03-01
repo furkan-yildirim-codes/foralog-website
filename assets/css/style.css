@@ -127,20 +127,22 @@ footer {
         grid-template-columns: 1fr;
     }
     .nav-container {
-        position: relative;
+        display: flex;
         justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .logo img {
+        height: 45px;
     }
 
     .hamburger {
         display: block;
         position: absolute;
         left: 20px;
-        font-size: 28px;
+        font-size: 30px;
         cursor: pointer;
-    }
-
-    .logo {
-        margin: auto;
     }
 
     .navbar nav {
@@ -160,6 +162,10 @@ footer {
     .navbar nav a {
         margin: 15px 0;
         font-size: 18px;
+    }
+
+    .navbar nav.active {
+        display: flex;
     }
 }
 
