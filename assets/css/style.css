@@ -86,3 +86,39 @@ footer {
 .logo img {
     height: 60px;
 }
+
+.services {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.service-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #f97316;
+}
