@@ -147,6 +147,9 @@ footer {
         display: block;
         position: absolute;
         right: 20px;
+        font-size: 28px;
+        cursor: pointer;
+        color: #f97316;
     }
 
     .navbar nav.active {
@@ -178,6 +181,8 @@ footer {
     display: none;
     font-size: 28px;
     cursor: pointer;
+    color: #f97316;
+    font-weight: bold;
 }
 
 .navbar nav.active {
