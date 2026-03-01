@@ -126,6 +126,41 @@ footer {
     .service-cards {
         grid-template-columns: 1fr;
     }
+    .nav-container {
+        position: relative;
+        justify-content: center;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 20px;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .logo {
+        margin: auto;
+    }
+
+    .navbar nav {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        z-index: 999;
+    }
+
+    .navbar nav a {
+        margin: 15px 0;
+        font-size: 18px;
+    }
 }
 
 .nav-container {
@@ -140,32 +175,6 @@ footer {
     cursor: pointer;
 }
 
-/* Mobil */
-
-@media (max-width: 900px) {
-
-    .navbar nav {
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: white;
-        display: none;
-        flex-direction: column;
-        text-align: center;
-        padding: 20px 0;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    }
-
-    .navbar nav a {
-        margin: 15px 0;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .logo {
-        margin: auto;
-    }
+.navbar nav.active {
+    display: flex;
 }
