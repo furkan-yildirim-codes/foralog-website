@@ -22,9 +22,6 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .navbar nav a {
@@ -132,10 +129,10 @@ footer {
     }
 
     .nav-container {
-        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
 
     .logo {
@@ -150,8 +147,6 @@ footer {
         display: block;
         position: absolute;
         right: 20px;
-        font-size: 28px;
-        cursor: pointer;
     }
 
     .navbar nav.active {
