@@ -5,30 +5,47 @@ hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
 
-const counters = document.querySelectorAll(".counter");
+document.addEventListener("DOMContentLoaded", function () {
 
-const animateCounter = (counter) => {
-    const target = +counter.getAttribute("data-target");
-    const duration = 2000; 
-    const stepTime = 20;   
-    const totalSteps = duration / stepTime;
-    const increment = target / totalSteps;
+    const counters = document.querySelectorAll(".counter");
 
-    let count = 0;
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute("data-target");
+        const duration = 2500; // 2.5 saniye
+        const stepTime = 30;
+        const totalSteps = duration / stepTime;
+        const increment = target / totalSteps;
 
-    const update = () => {
-        count += increment;
+        let count = 0;
 
-        if (count < target) {
-            counter.innerText = Math.floor(count);
-            setTimeout(update, stepTime);
-        } else {
-            counter.innerText = target + (target === 25 || target === 7 ? "+" : "");
-        }
+        const update = () => {
+            count += increment;
+
+            if (count < target) {
+                counter.innerText = Math.floor(count);
+                setTimeout(update, stepTime);
+            } else {
+                counter.innerText = target + (target === 25 || target === 7 ? "+" : "");
+            }
+        };
+
+        update();
     };
 
-    update();
-};
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+
+});
 
 const reveals = document.querySelectorAll(".reveal");
 
