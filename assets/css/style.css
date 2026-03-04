@@ -40,14 +40,22 @@ body {
 
 .hero {
     min-height: 100vh;
-    background: #f8fafc;
+    background: linear-gradient(to bottom right, #f97316, #ea580c);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 20px;
     position: relative;
     overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: url('assets/images/logo.png') center/contain no-repeat;
+    opacity: 0.08;
 }
 
 .hero-content h1 {
