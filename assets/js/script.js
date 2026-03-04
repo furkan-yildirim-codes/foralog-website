@@ -22,10 +22,24 @@ document.addEventListener("DOMContentLoaded", function () {
             count += increment;
 
             if (count < target) {
-                counter.innerText = Math.floor(count);
+
+                if (counter.classList.contains("percent")) {
+                    counter.innerText = "%" + Math.floor(count);
+                } else {
+                    counter.innerText = Math.floor(count);
+                }
+
                 setTimeout(update, stepTime);
+
             } else {
-                counter.innerText = target + (target === 25 || target === 7 ? "+" : "");
+
+                if (counter.classList.contains("percent")) {
+                    counter.innerText = "%" + target;
+                } else if (target === 25 || target === 7) {
+                    counter.innerText = target + "+";
+                } else {
+                    counter.innerText = target;
+                }
             }
         };
 
@@ -45,20 +59,19 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(counter);
     });
 
+    const reveals = document.querySelectorAll(".reveal");
+
+    const revealOnScroll = () => {
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+            const revealPoint = 100;
+
+            if (elementTop < windowHeight - revealPoint) {
+                el.classList.add("active");
+            }
+        });
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
 });
-
-const reveals = document.querySelectorAll(".reveal");
-
-const revealOnScroll = () => {
-    reveals.forEach(el => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        const revealPoint = 100;
-
-        if (elementTop < windowHeight - revealPoint) {
-            el.classList.add("active");
-        }
-    });
-};
-
-window.addEventListener("scroll", revealOnScroll);
