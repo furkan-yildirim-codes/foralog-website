@@ -1,8 +1,15 @@
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
+document.addEventListener("DOMContentLoaded", function () {
 
-hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+    }
+
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -11,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const animateCounter = (counter) => {
         const target = +counter.getAttribute("data-target");
-        const duration = 2500; // 2.5 saniye
+        const duration = 2500;
         const stepTime = 30;
         const totalSteps = duration / stepTime;
         const increment = target / totalSteps;
@@ -46,46 +53,44 @@ document.addEventListener("DOMContentLoaded", function () {
         update();
     };
 
-    const observer = new IntersectionObserver(entries => {
+    const counterObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateCounter(entry.target);
-                observer.unobserve(entry.target);
+                counterObserver.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 });
 
     counters.forEach(counter => {
-        observer.observe(counter);
+        counterObserver.observe(counter);
     });
 
-    const reveals = document.querySelectorAll(".reveal");
+    const reveals = document.querySelectorAll(
+        ".reveal, .reveal-left, .reveal-right"
+    );
 
-    const revealOnScroll = () => {
-        reveals.forEach(el => {
-            const windowHeight = window.innerHeight;
-            const elementTop = el.getBoundingClientRect().top;
-            const revealPoint = 100;
+    const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
 
-            if (elementTop < windowHeight - revealPoint) {
-                el.classList.add("active");
+                if (entry.target.classList.contains("reveal-left") ||
+                    entry.target.classList.contains("reveal-right")) {
+
+                    entry.target.classList.add("reveal-active");
+
+                } else {
+
+                    entry.target.classList.add("active");
+                }
+
+                revealObserver.unobserve(entry.target);
             }
         });
-    };
+    }, { threshold: 0.15 });
 
-    window.addEventListener("scroll", revealOnScroll);
-});
-
-const contactReveals = document.querySelectorAll(".reveal-left, .reveal-right");
-
-const contactObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("reveal-active");
-        }
+    reveals.forEach(el => {
+        revealObserver.observe(el);
     });
-}, { threshold: 0.3 });
 
-contactReveals.forEach(el => {
-    contactObserver.observe(el);
 });

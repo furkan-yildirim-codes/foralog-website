@@ -178,11 +178,37 @@ footer {
 }
 
 .hamburger {
+    width: 28px;
+    height: 22px;
     display: none;
-    font-size: 28px;
+    flex-direction: column;
+    justify-content: space-between;
     cursor: pointer;
-    color: #f97316;
-    font-weight: bold;
+    z-index: 2000;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 100%;
+    background: #ea580c;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+.hamburger:active {
+    transform: scale(0.92);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .navbar nav.active {
@@ -191,30 +217,48 @@ footer {
 
 @media (max-width: 900px) {
     .hamburger {
-        display: block !important;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 30px;
-        color: #f97316;
-        z-index: 2000;
+        display: flex;
     }
 
     nav {
-        display: none;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 90%;
+        left: 5%;
+        background: white;
+        border-radius: 12px;
+        padding: 30px 0;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        transform: translateY(-15px);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
     }
 
     nav.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 20px 0;
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
     }
+
+    nav a {
+        display: block;
+        padding: 15px 0;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: 0.3s ease;
+    }
+
+    nav.active a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    nav.active a:nth-child(1) { transition-delay: 0.1s; }
+    nav.active a:nth-child(2) { transition-delay: 0.2s; }
+    nav.active a:nth-child(3) { transition-delay: 0.3s; }
+    nav.active a:nth-child(4) { transition-delay: 0.4s; }
 }
 
 .page-hero {
