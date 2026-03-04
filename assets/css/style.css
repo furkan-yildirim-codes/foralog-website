@@ -219,7 +219,7 @@ footer {
 
 .page-hero {
     background: linear-gradient(135deg, #f97316, #ea580c);
-    padding: 100px 0;
+    padding: 160px 0 120px 0;  /* üst padding artırıldı */
     text-align: center;
     color: white;
 }
