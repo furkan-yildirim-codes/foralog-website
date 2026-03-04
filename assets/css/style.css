@@ -574,3 +574,35 @@ footer {
 .hero h1 {
     color: #ea580c;
 }
+
+.services-detail-section {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.service-block {
+    background: white;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    transition: 0.4s ease;
+}
+
+.service-block:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
+
+.service-block h2 {
+    color: #ea580c;
+    margin-bottom: 20px;
+}
+
+.service-block ul {
+    padding-left: 20px;
+}
+
+.service-block li {
+    margin-bottom: 10px;
+}
