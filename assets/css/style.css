@@ -472,3 +472,46 @@ footer {
 .about-text {
     animation: fadeUp 0.8s ease forwards;
 }
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-section {
+    padding: 120px 0;
+    background: linear-gradient(to bottom, #f8fafc, #eef2f7);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 70%);
+    top: -200px;
+    right: -200px;
+}
+
+.europe-map {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.europe-map img {
+    max-width: 100%;
+    opacity: 0.85;
+    transition: 0.4s;
+}
+
+.europe-map img:hover {
+    transform: scale(1.02);
+}
