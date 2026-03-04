@@ -75,3 +75,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", revealOnScroll);
 });
+
+const contactReveals = document.querySelectorAll(".reveal-left, .reveal-right");
+
+const contactObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-active");
+        }
+    });
+}, { threshold: 0.3 });
+
+contactReveals.forEach(el => {
+    contactObserver.observe(el);
+});
