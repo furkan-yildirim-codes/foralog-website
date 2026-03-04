@@ -219,14 +219,36 @@ footer {
 
 .page-hero {
     background: linear-gradient(135deg, #f97316, #ea580c);
-    padding: 160px 0 120px 0;  /* üst padding artırıldı */
+    padding: 160px 0 120px 0;
     text-align: center;
     color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 -10px 40px rgba(0,0,0,0.1);
+}
+
+.page-hero::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+    top: -150px;
+    right: -150px;
 }
 
 .page-hero h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+.page-hero p {
+    opacity: 0.9;
+    margin-top: 15px;
+    font-size: 18px;
 }
 
 .page-section {
