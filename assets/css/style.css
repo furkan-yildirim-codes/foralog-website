@@ -218,10 +218,10 @@ footer {
 }
 
 .page-hero {
-    background: #f97316;
-    color: white;
-    padding: 150px 0 80px;
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    padding: 100px 0;
     text-align: center;
+    color: white;
 }
 
 .page-hero h1 {
@@ -255,26 +255,32 @@ footer {
 }
 
 .contact-section {
-    padding: 100px 0;
+    padding: 120px 0;
     background: #f8fafc;
 }
 
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 60px;
     align-items: stretch;
 }
 
 .contact-card {
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
 }
 
 .contact-card h2 {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #f97316;
 }
 
@@ -289,10 +295,15 @@ footer {
 }
 
 .map-container {
-    border-radius: 12px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    min-height: 400px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+    transition: 0.4s;
+    min-height: 450px;
+}
+
+.map-container:hover {
+    transform: scale(1.02);
 }
 
 @media (max-width: 900px) {
@@ -303,4 +314,25 @@ footer {
 
 .map-container iframe {
     filter: grayscale(20%) contrast(1.05);
+}
+
+.contact-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.contact-box {
+    display: flex;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.contact-box:hover {
+    background: rgba(249,115,22,0.08);
+}
+
+.contact-box span {
+    font-size: 22px;
 }
