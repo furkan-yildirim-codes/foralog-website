@@ -9,35 +9,26 @@ const counters = document.querySelectorAll(".counter");
 
 const animateCounter = (counter) => {
     const target = +counter.getAttribute("data-target");
+    const duration = 2000; 
+    const stepTime = 20;   
+    const totalSteps = duration / stepTime;
+    const increment = target / totalSteps;
+
     let count = 0;
 
     const update = () => {
-        const increment = target / 60;
         count += increment;
 
         if (count < target) {
-            counter.innerText = Math.ceil(count);
-            requestAnimationFrame(update);
+            counter.innerText = Math.floor(count);
+            setTimeout(update, stepTime);
         } else {
-            counter.innerText = target;
+            counter.innerText = target + (target === 25 || target === 7 ? "+" : "");
         }
     };
 
     update();
 };
-
-const counterObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateCounter(entry.target);
-            counterObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.6 });
-
-counters.forEach(counter => {
-    counterObserver.observe(counter);
-});
 
 const reveals = document.querySelectorAll(".reveal");
 

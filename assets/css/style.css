@@ -507,11 +507,12 @@ footer {
 }
 
 .europe-map img {
-    max-width: 100%;
-    opacity: 0.85;
-    transition: 0.4s;
+    filter: grayscale(100%);
+    opacity: 0.9;
+    transition: 0.5s ease;
 }
 
 .europe-map img:hover {
-    transform: scale(1.02);
+    filter: grayscale(0%);
+    transform: scale(1.03);
 }
