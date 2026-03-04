@@ -300,3 +300,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+.map-container iframe {
+    filter: grayscale(20%) contrast(1.05);
+}
