@@ -96,3 +96,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+const slider = document.querySelector(".hero-slider");
+
+if (slider) {
+
+    const images = [
+        "assets/images/truck1.png",
+        "assets/images/truck2.png",
+        "assets/images/truck3.png",
+        "assets/images/truck4.png"
+    ];
+
+    let current = 0;
+
+    function changeSlide() {
+
+        slider.style.opacity = 0;
+
+        setTimeout(() => {
+            slider.style.backgroundImage = `url(${images[current]})`;
+            slider.style.opacity = 1;
+            current = (current + 1) % images.length;
+        }, 500);
+
+    }
+
+    slider.style.backgroundImage = `url(${images[0]})`;
+
+    setInterval(changeSlide, 5000); // 5 saniyede bir değişir
+}

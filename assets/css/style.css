@@ -40,14 +40,37 @@ body {
 
 .hero {
     min-height: 100vh;
-    background: #f8fafc;
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 0 20px;
+}
+
+.hero-slider {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+.hero-content {
     position: relative;
-    overflow: hidden;
+    z-index: 2;
+    color: white;
 }
 
 .hero-content h1 {
