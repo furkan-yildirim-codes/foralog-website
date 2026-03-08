@@ -10,56 +10,68 @@
 
 <header class="navbar">
     <div class="container nav-container">
-        
+
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        
+
         <div class="logo">
             <img src="assets/images/logo.png" alt="Foralog Logo">
         </div>
+
         <nav id="nav-menu">
-            <a href="index.html">Ana Sayfa</a>
-            <a href="about.html">Hakkımızda</a>
-            <a href="services.html">Hizmetler</a>
-            <a href="contact.html">İletişim</a>
+            <a href="index.html" data-key="navHome">Ana Sayfa</a>
+            <a href="about.html" data-key="navAbout">Hakkımızda</a>
+            <a href="services.html" data-key="navServices">Hizmetler</a>
+            <a href="contact.html" data-key="navContact">İletişim</a>
+
+            <!-- Mobil Dil -->
+            <div class="lang-switch mobile-lang" id="lang-switch">TR</div>
         </nav>
+
+        <!-- Desktop Dil -->
+        <div class="lang-switch desktop-lang" id="lang-switch-desktop">TR</div>
+
     </div>
 </header>
 
+
 <section class="page-hero">
     <div class="container">
-        <h1>Hakkımızda</h1>
-        <p>2000 yılından bu yana uluslararası karayolu taşımacılığında güvenilir çözüm ortağınız.</p>
+        <h1 data-key="aboutHeroTitle">Hakkımızda</h1>
+        <p data-key="aboutHeroDesc">
+            2000 yılından bu yana uluslararası karayolu taşımacılığında güvenilir çözüm ortağınız.
+        </p>
     </div>
 </section>
+
 
 <section class="about-section">
     <div class="container about-container">
 
         <div class="about-text reveal">
-            <h2>Kuruluş Hikayemiz</h2>
+            <h2 data-key="aboutTitle">Kuruluş Hikayemiz</h2>
 
-            <p>
+            <p data-key="aboutText1">
                 Şirketimiz, 2000 senesinin sonunda uzun yılların tecrübe ve birikimine sahip
                 bir ekip ile araç yatırımını tamamlayarak uluslararası karayolu taşımacılığı
                 faaliyetine başlamıştır.
             </p>
 
-            <p>
+            <p data-key="aboutText2">
                 Kurulduğu ilk günden bu yana butik çalışma anlayışını benimseyen firmamız,
                 özellikle parsiyel taşımacılıkta maksimum kapasite kullanımını sağlayan
                 çift katlı özel araç filosu ile hizmet vermektedir.
             </p>
 
-            <p>
+            <p data-key="aboutText3">
                 Taşımacılıkta kaliteyi sabit tutabilmek adına yalnızca FORA araçları
                 kullanılmakta, kiralık organizasyonlara gidilmemektedir.
             </p>
 
-            <p>
+            <p data-key="aboutText4">
                 İthalat/ihracat gümrükleme, yükleme, boşaltma, aktarma, iç dağıtım ve
                 ön taşıma gibi ek hizmetler ile uluslararası nakliye süreci uçtan uca
                 yönetilmektedir.
@@ -69,49 +81,54 @@
         <div class="about-stats reveal">
             <div class="stat-box">
                 <h3 class="counter" data-target="25">0</h3>
-                <p>Yıl Deneyim</p>
+                <p data-key="stat1">Yıl Deneyim</p>
             </div>
 
             <div class="stat-box">
                 <h3 class="counter" data-target="7">0</h3>
-                <p>Avrupa Ülkesi</p>
+                <p data-key="stat2">Avrupa Ülkesi</p>
             </div>
 
             <div class="stat-box">
                 <h3 class="counter percent" data-target="100">0</h3>
-                <p>Güvenilir Hizmet</p>
+                <p data-key="stat3">Güvenilir Hizmet</p>
             </div>
         </div>
 
     </div>
 </section>
 
+
 <section class="countries-section reveal">
+
     <div class="europe-map reveal">
         <img src="assets/images/europe-map.png" alt="Avrupa Haritası">
     </div>
+
     <div class="container">
-        <h2>Hizmet Verdiğimiz Başlıca Ülkeler</h2>
+        <h2 data-key="countriesTitle">Hizmet Verdiğimiz Başlıca Ülkeler</h2>
 
         <div class="countries-grid">
-            <div>Almanya</div>
-            <div>Avusturya</div>
-            <div>İsviçre</div>
-            <div>Hollanda</div>
-            <div>Belçika</div>
-            <div>Doğu Fransa</div>
-            <div>Güney Danimarka</div>
+            <div data-key="country1">Almanya</div>
+            <div data-key="country2">Avusturya</div>
+            <div data-key="country3">İsviçre</div>
+            <div data-key="country4">Hollanda</div>
+            <div data-key="country5">Belçika</div>
+            <div data-key="country6">Doğu Fransa</div>
+            <div data-key="country7">Güney Danimarka</div>
         </div>
 
-        <p class="country-note">
+        <p class="country-note" data-key="countryNote">
             Özellikle Almanya hattında güçlü acentelik bağları ile yerli ve yabancı
             müşterilerimizin tüm taleplerine hızlı ve güvenilir çözümler sunmaktayız.
         </p>
     </div>
+
 </section>
 
+
 <footer>
-    <p>© 2026 Foralog. Tüm hakları saklıdır.</p>
+    <p data-key="footerText">© 2026 Foralog. Tüm hakları saklıdır.</p>
 </footer>
 
 <script src="assets/js/script.js"></script>

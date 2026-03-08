@@ -20,12 +20,20 @@
         <div class="logo">
             <img src="assets/images/logo.png" alt="Foralog Logo">
         </div>
+
         <nav id="nav-menu">
-            <a href="index.html">Ana Sayfa</a>
-            <a href="about.html">Hakkımızda</a>
-            <a href="services.html">Hizmetler</a>
-            <a href="contact.html">İletişim</a>
+            <a href="index.html" data-key="navHome">Ana Sayfa</a>
+            <a href="about.html" data-key="navAbout">Hakkımızda</a>
+            <a href="services.html" data-key="navServices">Hizmetler</a>
+            <a href="contact.html" data-key="navContact">İletişim</a>
+
+            <!-- Mobil Dil Butonu -->
+            <div class="lang-switch mobile-lang" id="lang-switch">TR</div>
         </nav>
+
+        <!-- Desktop Dil Butonu -->
+        <div class="lang-switch desktop-lang" id="lang-switch-desktop">TR</div>
+
     </div>
 </header>
 
@@ -35,61 +43,72 @@
     <div class="hero-content">
         <img src="assets/images/logo.png" alt="Foralog Logo" class="hero-logo">
 
-        <h1>2000'den Beri Avrupa'ya Güvenli Taşımacılık</h1>
-        <p>Uluslararası kara nakliyesinde 25+ yıllık deneyim ile zamanında ve güvenilir lojistik çözümler sunuyoruz.</p>
-        <a href="contact.html" class="btn">Teklif Alın</a>
+        <h1 data-key="heroTitle">
+            2000'den Beri Avrupa'ya Güvenli Taşımacılık
+        </h1>
+
+        <p data-key="heroDesc">
+            Uluslararası kara nakliyesinde 25+ yıllık deneyim ile zamanında ve güvenilir lojistik çözümler sunuyoruz.
+        </p>
+
+        <a href="contact.html" class="btn" data-key="offerBtn">
+            Teklif Alın
+        </a>
     </div>
 </section>
 
 <section class="services">
     <div class="container">
-        <h2 class="section-title">Hizmetlerimiz</h2>
+        <h2 class="section-title" data-key="servicesTitle">Hizmetlerimiz</h2>
 
         <div class="service-cards">
 
             <div class="card">
-                <h3>Uluslararası Kara Nakliyesi</h3>
-                <p>Avrupa ülkelerine düzenli ve güvenli taşımacılık hizmeti.</p>
+                <h3 data-key="service1Title">Uluslararası Kara Nakliyesi</h3>
+                <p data-key="service1Desc">Avrupa ülkelerine düzenli ve güvenli taşımacılık hizmeti.</p>
             </div>
 
             <div class="card">
-                <h3>Yurtiçi Taşımacılık</h3>
-                <p>Türkiye genelinde hızlı ve planlı lojistik operasyonlar.</p>
+                <h3 data-key="service2Title">Yurtiçi Taşımacılık</h3>
+                <p data-key="service2Desc">Türkiye genelinde hızlı ve planlı lojistik operasyonlar.</p>
             </div>
 
             <div class="card">
-                <h3>Avrupa Hat Uzmanlığı</h3>
-                <p>Avrupa rotalarında güçlü operasyon ağı ve zamanında teslimat.</p>
+                <h3 data-key="service3Title">Avrupa Hat Uzmanlığı</h3>
+                <p data-key="service3Desc">Avrupa rotalarında güçlü operasyon ağı ve zamanında teslimat.</p>
             </div>
+
         </div>
     </div>
 </section>
 
 <section class="why-us">
     <div class="container">
-        <h2 class="section-title">Neden Fora Lojistik?</h2>
+        <h2 class="section-title" data-key="whyTitle">Neden Fora Lojistik?</h2>
+
         <div class="service-cards">
 
             <div class="card">
-                <h3>25+ Yıl Deneyim</h3>
-                <p>2000 Yılından bu yana uluslararası taşımacılık tecrübesi.</p>
+                <h3 data-key="why1Title">25+ Yıl Deneyim</h3>
+                <p data-key="why1Desc">2000 yılından bu yana uluslararası taşımacılık tecrübesi.</p>
             </div>
 
             <div class="card">
-                <h3>Avrupa Uzmanlığı</h3>
-                <p>Avrupa hatlarında güçlü operasyon ve zamanında teslimat.</p>
+                <h3 data-key="why2Title">Avrupa Uzmanlığı</h3>
+                <p data-key="why2Desc">Avrupa hatlarında güçlü operasyon ve zamanında teslimat.</p>
             </div>
 
             <div class="card">
-                <h3>Güvenilir Hizmet</h3>
-                <p>Müşteri memnuniyetini esas alan şeffaf ve planlı lojistik süreç.</p>
+                <h3 data-key="why3Title">Güvenilir Hizmet</h3>
+                <p data-key="why3Desc">Müşteri memnuniyetini esas alan şeffaf ve planlı lojistik süreç.</p>
             </div>
+
         </div>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Foralog. Tüm hakları saklıdır.</p>
+    <p data-key="footerText">© 2026 Foralog. Tüm hakları saklıdır.</p>
 </footer>
 
 <script src="assets/js/script.js"></script>

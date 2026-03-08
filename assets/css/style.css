@@ -649,3 +649,67 @@ body.menu-open {
 html, body {
     overflow-x: hidden;
 }
+
+.lang-switch {
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #ea580c;
+    border: 2px solid #ea580c;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.lang-switch:hover {
+    background: #ea580c;
+    color: white;
+}
+
+/* Varsayılan: Desktop */
+.desktop-lang {
+    display: block;
+}
+
+.mobile-lang {
+    display: none;
+}
+
+/* Mobil */
+@media (max-width: 900px) {
+
+    .desktop-lang {
+        display: none;
+    }
+
+    .mobile-lang {
+        display: block;
+        margin: 20px auto 0 auto;
+        width: 80%;
+        text-align: center;
+    }
+}
+
+#nav-menu .lang-switch {
+    width: 80%;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    #lang-switch-desktop {
+        display: none;
+    }
+
+    #nav-menu .lang-switch {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+.lang-de .page-hero h1 {
+    font-size: 2.6rem;
+}

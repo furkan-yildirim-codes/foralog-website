@@ -20,19 +20,29 @@
         <div class="logo">
             <img src="assets/images/logo.png" alt="Foralog Logo">
         </div>
+
         <nav id="nav-menu">
-            <a href="index.html">Ana Sayfa</a>
-            <a href="about.html">Hakkımızda</a>
-            <a href="services.html">Hizmetler</a>
-            <a href="contact.html">İletişim</a>
+            <a href="index.html" data-key="navHome">Ana Sayfa</a>
+            <a href="about.html" data-key="navAbout">Hakkımızda</a>
+            <a href="services.html" data-key="navServices">Hizmetler</a>
+            <a href="contact.html" data-key="navContact">İletişim</a>
+
+            <!-- Mobil Dil Butonu -->
+            <div class="lang-switch" id="lang-switch">TR</div>
         </nav>
+
+        <!-- Desktop Dil Butonu -->
+        <div class="lang-switch" id="lang-switch-desktop">TR</div>
+
     </div>
 </header>
 
 <section class="page-hero">
     <div class="container">
-        <h1>İletişim</h1>
-        <p>Bizimle iletişime geçin. Size en kısa sürede dönüş yapalım.</p>
+        <h1 data-key="contactHeroTitle">İletişim</h1>
+        <p data-key="contactHeroDesc">
+            Bizimle iletişime geçin. Size en kısa sürede dönüş yapalım.
+        </p>
     </div>
 </section>
 
@@ -40,15 +50,15 @@
     <div class="container contact-container">
 
         <div class="contact-card reveal-left">
-            <h2>Fora Uluslararası Taşımacılık</h2>
+            <h2 data-key="contactCompany">Fora Uluslararası Taşımacılık</h2>
 
             <div class="contact-grid">
 
                 <div class="contact-box">
                     <span>📍</span>
                     <div>
-                        <strong>Adres</strong>
-                        <p>
+                        <strong data-key="contactAddressTitle">Adres</strong>
+                        <p data-key="contactAddress">
                         Eyüp Sultan Mahallesi – Hoca Nasreddin Caddesi – No:12<br>
                         TR – 34885 Sancaktepe / İstanbul – TÜRKİYE
                         </p>
@@ -58,7 +68,7 @@
                 <div class="contact-box">
                     <span>📞</span>
                     <div>
-                        <strong>Telefon</strong>
+                        <strong data-key="contactPhoneTitle">Telefon</strong>
                         <p>+90 216 499 69 23</p>
                     </div>
                 </div>
@@ -66,7 +76,7 @@
                 <div class="contact-box">
                     <span>📠</span>
                     <div>
-                        <strong>Fax</strong>
+                        <strong data-key="contactFaxTitle">Fax</strong>
                         <p>+90 216 499 70 34</p>
                     </div>
                 </div>
@@ -74,7 +84,7 @@
                 <div class="contact-box">
                     <span>✉️</span>
                     <div>
-                        <strong>E-Mail</strong>
+                        <strong data-key="contactMailTitle">E-Mail</strong>
                         <p>info@foralog.com</p>
                     </div>
                 </div>
@@ -98,7 +108,7 @@
 </section>
 
 <footer>
-    <p>© 2026 Foralog. Tüm hakları saklıdır.</p>
+    <p data-key="footerText">© 2026 Foralog. Tüm hakları saklıdır.</p>
 </footer>
 
 <script src="assets/js/script.js"></script>
