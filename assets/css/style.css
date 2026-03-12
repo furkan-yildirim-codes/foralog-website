@@ -49,15 +49,44 @@ body.language-transition [data-key] {
 }
 
 .navbar nav a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
-    color: #1e293b;
+    color: #334155;
     margin-left: 25px;
-    font-weight: 500;
-    transition: 0.3s;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 10px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #f97316, #fb923c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
 }
 
 .navbar nav a:hover {
     color: #f97316;
+    transform: translateY(-1px);
+}
+
+.navbar nav a.active {
+    color: #f97316;
+}
+
+.navbar nav a.active::after,
+.navbar nav a:hover::after {
+    transform: scaleX(1);
 }
 
 .hero {
@@ -152,6 +181,34 @@ body.language-transition [data-key] {
 .hero-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
+}
+
+.hero-title-text {
+    display: inline-block;
+    will-change: clip-path, opacity, filter, transform;
+}
+
+.hero-content h1.hero-title-typing .hero-title-text {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.2;
+    filter: blur(8px);
+    transform: translateY(8px);
+    animation: heroTypingReveal var(--typing-duration, 1.9s) cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes heroTypingReveal {
+    from {
+        clip-path: inset(0 100% 0 0);
+        opacity: 0.2;
+        filter: blur(8px);
+        transform: translateY(8px);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
 }
 
 .hero-content p {
@@ -396,6 +453,20 @@ footer {
         transform: translateY(10px);
         transition: 0.3s ease;
         text-align: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar nav a::after {
+        left: 50%;
+        width: 120px;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+    }
+
+    .navbar nav a:hover::after,
+    .navbar nav a.active::after {
+        transform: translateX(-50%) scaleX(1);
     }
 
     nav.active a {

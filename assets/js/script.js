@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("nav-menu");
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
     if (hamburger && navMenu) {
         hamburger.addEventListener("click", () => {
@@ -13,6 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.classList.toggle("menu-open");
         });
     }
+
+    document.querySelectorAll("#nav-menu a").forEach(link => {
+        const href = link.getAttribute("href");
+        if (href === currentPage) {
+            link.classList.add("active");
+        }
+    });
 
 });
 
@@ -461,8 +469,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const langSwitchMobile = document.getElementById("lang-switch");
     const langSwitchDesktop = document.getElementById("lang-switch-desktop");
+    const heroTitle = document.querySelector('[data-key="heroTitle"]');
 
     let currentLang = localStorage.getItem("lang") || "tr";
+    let heroTypingTimeout;
 
     function animateLanguageButtons() {
         [langSwitchMobile, langSwitchDesktop].forEach(button => {
@@ -484,11 +494,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 450);
     }
 
+    function typeHeroTitle(text) {
+        if (!heroTitle) return;
+
+        clearTimeout(heroTypingTimeout);
+        heroTitle.classList.add("hero-title-typing");
+        heroTitle.innerHTML = `<span class="hero-title-text">${text}</span>`;
+        heroTitle.style.setProperty("--typing-duration", `${Math.max(Math.min(text.length * 0.075, 3.8), 2.3)}s`);
+
+        void heroTitle.offsetWidth;
+
+        heroTypingTimeout = setTimeout(() => {
+            heroTitle.classList.remove("hero-title-typing");
+        }, Math.max(Math.min(text.length * 75, 3800), 2300) + 250);
+    }
+
     function updateLanguage(lang) {
         document.querySelectorAll("[data-key]").forEach(el => {
             const key = el.getAttribute("data-key");
             if (translations[lang] && translations[lang][key]) {
-                el.textContent = translations[lang][key];
+                if (key !== "heroTitle") {
+                    el.textContent = translations[lang][key];
+                }
             }
         });
 
@@ -497,6 +524,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (langSwitchMobile) langSwitchMobile.textContent = lang.toUpperCase();
         if (langSwitchDesktop) langSwitchDesktop.textContent = lang.toUpperCase();
+
+        if (translations[lang] && translations[lang].heroTitle) {
+            typeHeroTitle(translations[lang].heroTitle);
+        }
 
         localStorage.setItem("lang", lang);
     }
