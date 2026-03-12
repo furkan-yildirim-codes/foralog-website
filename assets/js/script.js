@@ -105,7 +105,12 @@ document.addEventListener("DOMContentLoaded", function () {
         "assets/images/truck1.png",
         "assets/images/truck2.png",
         "assets/images/truck3.png",
-        "assets/images/truck4.png"
+        "assets/images/truck4.png",
+        "assets/images/truck5.png",
+        "assets/images/truck6.png",
+        "assets/images/truck7.png",
+        "assets/images/truck8.png",
+        "assets/images/truck9.png"
     ];
 
     let current = 0;
@@ -120,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     slider.style.backgroundImage = `url(${images[0]})`;
-    setInterval(changeSlide, 5000);
+    setInterval(changeSlide, 3000);
 
 });
 
