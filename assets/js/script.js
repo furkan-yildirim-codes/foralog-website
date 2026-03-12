@@ -464,6 +464,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentLang = localStorage.getItem("lang") || "tr";
 
+    function animateLanguageButtons() {
+        [langSwitchMobile, langSwitchDesktop].forEach(button => {
+            if (!button) return;
+
+            button.classList.remove("switching");
+            void button.offsetWidth;
+            button.classList.add("switching");
+        });
+    }
+
     function updateLanguage(lang) {
         document.querySelectorAll("[data-key]").forEach(el => {
             const key = el.getAttribute("data-key");
@@ -486,6 +496,7 @@ document.addEventListener("DOMContentLoaded", function () {
         else if (currentLang === "en") currentLang = "de";
         else currentLang = "tr";
 
+        animateLanguageButtons();
         updateLanguage(currentLang);
     }
 
