@@ -7,11 +7,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const navMenu = document.getElementById("nav-menu");
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
+    function closeMenu() {
+        if (!hamburger || !navMenu) return;
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+        document.body.classList.remove("menu-open");
+    }
+
     if (hamburger && navMenu) {
         hamburger.addEventListener("click", () => {
             hamburger.classList.toggle("active");
             navMenu.classList.toggle("active");
             document.body.classList.toggle("menu-open");
+        });
+
+        document.addEventListener("click", event => {
+            const clickedInsideMenu = navMenu.contains(event.target);
+            const clickedHamburger = hamburger.contains(event.target);
+
+            if (!clickedInsideMenu && !clickedHamburger && navMenu.classList.contains("active")) {
+                closeMenu();
+            }
         });
     }
 
