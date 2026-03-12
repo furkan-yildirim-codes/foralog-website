@@ -101,30 +101,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const slider = document.querySelector(".hero-slider");
     if (!slider) return;
 
-    const images = [
-        "assets/images/truck1.png",
-        "assets/images/truck2.png",
-        "assets/images/truck3.png",
-        "assets/images/truck4.png",
-        "assets/images/truck5.png",
-        "assets/images/truck6.png",
-        "assets/images/truck7.png",
-        "assets/images/truck8.png",
-        "assets/images/truck9.png"
+    const slides = [
+        { src: "assets/images/truck1.png", mobilePosition: "65% center" },
+        { src: "assets/images/truck2.png", mobilePosition: "28% center" },
+        { src: "assets/images/truck3.png", mobilePosition: "55% center" },
+        { src: "assets/images/truck4.png", mobilePosition: "70% center" },
+        { src: "assets/images/truck5.png", mobilePosition: "48% center" },
+        { src: "assets/images/truck6.png", mobilePosition: "64% center" },
+        { src: "assets/images/truck7.png", mobilePosition: "52% center" },
+        { src: "assets/images/truck8.png", mobilePosition: "58% center" },
+        { src: "assets/images/truck9.png", mobilePosition: "70% center" }
     ];
 
     let current = 0;
 
+    function applySlide(index) {
+        const slide = slides[index];
+        slider.style.backgroundImage = `url(${slide.src})`;
+        slider.style.setProperty("--hero-bg-position", slide.desktopPosition || "center center");
+        slider.style.setProperty("--hero-bg-position-mobile", slide.mobilePosition || "center center");
+    }
+
     function changeSlide() {
         slider.style.opacity = 0;
         setTimeout(() => {
-            slider.style.backgroundImage = `url(${images[current]})`;
+            applySlide(current);
             slider.style.opacity = 1;
-            current = (current + 1) % images.length;
+            current = (current + 1) % slides.length;
         }, 500);
     }
 
-    slider.style.backgroundImage = `url(${images[0]})`;
+    applySlide(0);
     setInterval(changeSlide, 3000);
 
 });

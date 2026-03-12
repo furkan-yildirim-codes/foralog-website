@@ -53,10 +53,16 @@ body {
     position: absolute;
     inset: 0;
     background-size: cover;
-    background-position: center;
+    background-position: var(--hero-bg-position, center center);
     z-index: 0;
     opacity: 1;
     transition: opacity 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .hero-slider {
+        background-position: var(--hero-bg-position-mobile, center center);
+    }
 }
 
 .hero::after {
