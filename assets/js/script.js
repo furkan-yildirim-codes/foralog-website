@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (counter.classList.contains("percent")) {
                     counter.innerText = "%" + target;
                 } else if (target === 25 || target === 7) {
-                    counter.innerText = target + "+";
+                    counter.innerHTML = `${target}<span class="count-suffix">+</span>`;
                 } else {
                     counter.innerText = target;
                 }
