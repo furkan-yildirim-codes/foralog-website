@@ -495,3 +495,37 @@ document.addEventListener("DOMContentLoaded", function () {
     updateLanguage(currentLang);
 
 });
+
+
+// =============================
+// SCROLL TO TOP
+// =============================
+document.addEventListener("DOMContentLoaded", function () {
+
+    const scrollButton = document.createElement("button");
+    scrollButton.className = "scroll-to-top";
+    scrollButton.type = "button";
+    scrollButton.setAttribute("aria-label", "Sayfanin basina don");
+    scrollButton.innerHTML = "&#8593;";
+
+    document.body.appendChild(scrollButton);
+
+    function toggleScrollButton() {
+        if (window.scrollY > 250) {
+            scrollButton.classList.add("visible");
+        } else {
+            scrollButton.classList.remove("visible");
+        }
+    }
+
+    scrollButton.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    window.addEventListener("scroll", toggleScrollButton, { passive: true });
+    toggleScrollButton();
+
+});

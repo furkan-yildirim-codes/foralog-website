@@ -767,3 +767,45 @@ html, body {
 .lang-de .page-hero h1 {
     font-size: 2.6rem;
 }
+
+.scroll-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 40px;
+    width: 60px;
+    height: 60px;
+    border: 0;
+    border-radius: 999px;
+    background: #ea580c;
+    color: white;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 16px 35px rgba(15,23,42,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(16px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background 0.3s ease;
+    z-index: 1100;
+    touch-action: manipulation;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background: #c2410c;
+}
+
+@media (max-width: 768px) {
+    .scroll-to-top {
+        right: 16px;
+        bottom: 30px;
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+    }
+}
