@@ -9,6 +9,28 @@ body {
     color: #1e293b;
 }
 
+body.language-transition [data-key] {
+    animation: languageFadeSwap 0.45s ease;
+}
+
+@keyframes languageFadeSwap {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+    35% {
+        opacity: 0.15;
+        transform: translateY(8px);
+        filter: blur(3px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
 .navbar {
     background: rgba(255,255,255,0.9);
     backdrop-filter: blur(10px);

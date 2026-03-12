@@ -474,6 +474,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    function animateLanguageTransition() {
+        document.body.classList.remove("language-transition");
+        void document.body.offsetWidth;
+        document.body.classList.add("language-transition");
+
+        setTimeout(() => {
+            document.body.classList.remove("language-transition");
+        }, 450);
+    }
+
     function updateLanguage(lang) {
         document.querySelectorAll("[data-key]").forEach(el => {
             const key = el.getAttribute("data-key");
@@ -497,6 +507,7 @@ document.addEventListener("DOMContentLoaded", function () {
         else currentLang = "tr";
 
         animateLanguageButtons();
+        animateLanguageTransition();
         updateLanguage(currentLang);
     }
 
