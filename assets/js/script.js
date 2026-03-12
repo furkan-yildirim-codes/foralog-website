@@ -99,6 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
 
     const slider = document.querySelector(".hero-slider");
+    const prevButton = document.querySelector(".hero-nav-prev");
+    const nextButton = document.querySelector(".hero-nav-next");
     if (!slider) return;
 
     const slides = [
@@ -114,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     let current = 0;
+    let slideInterval;
 
     function applySlide(index) {
         const slide = slides[index];
@@ -122,17 +125,38 @@ document.addEventListener("DOMContentLoaded", function () {
         slider.style.setProperty("--hero-bg-position-mobile", slide.mobilePosition || "center center");
     }
 
-    function changeSlide() {
+    function showSlide(index) {
         slider.style.opacity = 0;
         setTimeout(() => {
+            current = (index + slides.length) % slides.length;
             applySlide(current);
             slider.style.opacity = 1;
-            current = (current + 1) % slides.length;
         }, 500);
     }
 
-    applySlide(0);
-    setInterval(changeSlide, 3000);
+    function startAutoSlide() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(() => {
+            showSlide(current + 1);
+        }, 4000);
+    }
+
+    if (prevButton) {
+        prevButton.addEventListener("click", () => {
+            showSlide(current - 1);
+            startAutoSlide();
+        });
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener("click", () => {
+            showSlide(current + 1);
+            startAutoSlide();
+        });
+    }
+
+    applySlide(current);
+    startAutoSlide();
 
 });
 
