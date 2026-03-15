@@ -251,6 +251,7 @@ document.addEventListener("DOMContentLoaded", function () {
             footerCompany: "FORA ULUSLARARASI TAS.LOJ.HIZM.TIC.LTD.STI",
             footerText: "© 2026 Foralog. Tüm hakları saklıdır.",
             footerDesigner: "Tasarlayan Furkan YILDIRIM",
+            serviceIntroBtn: "Tanıyalım",
 
             // SERVICES HERO
             servicesHeroTitle: "Hizmetlerimiz",
@@ -353,6 +354,7 @@ document.addEventListener("DOMContentLoaded", function () {
             footerCompany: "FORA ULUSLARARASI TAS.LOJ.HIZM.TIC.LTD.STI",
             footerText: "© 2026 Foralog. All rights reserved.",
             footerDesigner: "Designed by Furkan YILDIRIM",
+            serviceIntroBtn: "Explore",
 
             servicesHeroTitle: "Our Services",
             servicesHeroDesc: "The key difference in our transportation services is our double-deck vehicle fleet.",
@@ -447,6 +449,7 @@ document.addEventListener("DOMContentLoaded", function () {
             footerCompany: "FORA ULUSLARARASI TAS.LOJ.HIZM.TIC.LTD.STI",
             footerText: "© 2026 Foralog. Alle Rechte vorbehalten.",
             footerDesigner: "Design von Furkan YILDIRIM",
+            serviceIntroBtn: "Entdecken",
 
             servicesHeroTitle: "Unsere Dienstleistungen",
             servicesHeroDesc: "Der wichtigste Unterschied unserer Transportdienste ist unsere Doppeldeck-Fahrzeugflotte.",
@@ -577,6 +580,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // =============================
 document.addEventListener("DOMContentLoaded", function () {
 
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
     const scrollButton = document.createElement("button");
     scrollButton.className = "scroll-to-top";
     scrollButton.type = "button";
@@ -585,11 +589,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.body.appendChild(scrollButton);
 
+    let serviceShortcutButton = null;
+
+    if (currentPage === "index.html") {
+        serviceShortcutButton = document.createElement("button");
+        serviceShortcutButton.className = "service-shortcut-button";
+        serviceShortcutButton.type = "button";
+        serviceShortcutButton.setAttribute("aria-label", "İkinci kat sistemi kartina git");
+        serviceShortcutButton.textContent = "2K";
+        document.body.appendChild(serviceShortcutButton);
+
+        serviceShortcutButton.addEventListener("click", function () {
+            document.body.classList.add("page-transition-out");
+            window.setTimeout(function () {
+                window.location.href = "services.html#service-detail-intro-card";
+            }, 260);
+        });
+    }
+
     function toggleScrollButton() {
         if (window.scrollY > 250) {
             scrollButton.classList.add("visible");
+            if (serviceShortcutButton) serviceShortcutButton.classList.add("visible");
         } else {
             scrollButton.classList.remove("visible");
+            if (serviceShortcutButton) serviceShortcutButton.classList.remove("visible");
         }
     }
 
@@ -602,5 +626,149 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", toggleScrollButton, { passive: true });
     toggleScrollButton();
+
+});
+
+
+// =============================
+// SERVICE INTRO CARD
+// =============================
+document.addEventListener("DOMContentLoaded", function () {
+
+    const introCard = document.getElementById("service-detail-intro-card");
+    const introToggle = document.getElementById("service-intro-toggle");
+    const introCopy = document.getElementById("service-intro-copy");
+    const introGallerySecondary = document.getElementById("service-intro-gallery-secondary");
+    const galleryItems = Array.from(document.querySelectorAll(".service-gallery-item"));
+
+    if (!introCard || !introToggle) return;
+
+    introCard.classList.add("service-block-persistent-highlight");
+
+    if (window.location.hash === "#service-detail-intro-card") {
+        window.setTimeout(function () {
+            const offsetTop = introCard.getBoundingClientRect().top + window.scrollY - 120;
+            window.scrollTo({
+                top: Math.max(offsetTop, 0),
+                behavior: "smooth"
+            });
+
+            introCard.classList.add("service-block-highlight");
+            window.setTimeout(function () {
+                introCard.classList.remove("service-block-highlight");
+            }, 2200);
+        }, 180);
+    }
+
+    let lightbox = document.querySelector(".service-image-lightbox");
+    let currentLightboxIndex = -1;
+
+    function updateLightboxNavIcons() {
+        if (!lightbox) return;
+
+        const prevButton = lightbox.querySelector(".service-lightbox-prev");
+        const nextButton = lightbox.querySelector(".service-lightbox-next");
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+        if (!prevButton || !nextButton) return;
+
+        prevButton.innerHTML = isMobile ? "&#9650;" : "&#10094;";
+        nextButton.innerHTML = isMobile ? "&#9660;" : "&#10095;";
+    }
+
+    function showLightboxImage(index) {
+        if (!lightbox || galleryItems.length === 0) return;
+
+        currentLightboxIndex = (index + galleryItems.length) % galleryItems.length;
+
+        const activeItem = galleryItems[currentLightboxIndex];
+        const overlayImage = lightbox.querySelector("img");
+        overlayImage.src = activeItem.getAttribute("data-image-src") || "";
+        overlayImage.alt = activeItem.getAttribute("data-image-alt") || "";
+    }
+
+    function ensureLightbox() {
+        if (lightbox) return lightbox;
+
+        lightbox = document.createElement("div");
+        lightbox.className = "service-image-lightbox";
+        lightbox.innerHTML = [
+            '<button class="service-lightbox-nav service-lightbox-prev" type="button" aria-label="Önceki görsel"></button>',
+            '<img alt="">',
+            '<button class="service-lightbox-nav service-lightbox-next" type="button" aria-label="Sonraki görsel"></button>'
+        ].join("");
+        document.body.appendChild(lightbox);
+        updateLightboxNavIcons();
+
+        lightbox.addEventListener("click", function () {
+            lightbox.classList.remove("open");
+        });
+
+        lightbox.querySelector(".service-lightbox-prev").addEventListener("click", function (event) {
+            event.stopPropagation();
+            showLightboxImage(currentLightboxIndex - 1);
+        });
+
+        lightbox.querySelector(".service-lightbox-next").addEventListener("click", function (event) {
+            event.stopPropagation();
+            showLightboxImage(currentLightboxIndex + 1);
+        });
+
+        lightbox.querySelector("img").addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+
+        return lightbox;
+    }
+
+    introToggle.addEventListener("click", function () {
+        const isExpanded = introCard.classList.toggle("expanded");
+        introCard.classList.toggle("gallery-open", isExpanded);
+        introToggle.setAttribute("aria-expanded", String(isExpanded));
+        introCard.classList.add("is-transitioning");
+        introCard.classList.remove("service-block-persistent-highlight");
+
+        if (introCopy) {
+            introCopy.classList.toggle("is-hidden", isExpanded);
+        }
+
+        if (introGallerySecondary) {
+            if (isExpanded) {
+                introGallerySecondary.hidden = false;
+                window.setTimeout(function () {
+                    introGallerySecondary.classList.add("is-visible");
+                    introCard.classList.remove("is-transitioning");
+                }, 80);
+            } else {
+                introGallerySecondary.classList.remove("is-visible");
+                window.setTimeout(function () {
+                    introGallerySecondary.hidden = true;
+                    introCard.classList.remove("is-transitioning");
+                }, 320);
+            }
+        } else {
+            introCard.classList.remove("is-transitioning");
+        }
+    });
+
+    galleryItems.forEach(function (item, index) {
+            item.addEventListener("click", function () {
+                const overlay = ensureLightbox();
+                showLightboxImage(index);
+                overlay.classList.add("open");
+            });
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && lightbox) {
+            lightbox.classList.remove("open");
+        } else if (event.key === "ArrowLeft" && lightbox && lightbox.classList.contains("open")) {
+            showLightboxImage(currentLightboxIndex - 1);
+        } else if (event.key === "ArrowRight" && lightbox && lightbox.classList.contains("open")) {
+            showLightboxImage(currentLightboxIndex + 1);
+        }
+    });
+
+    window.addEventListener("resize", updateLightboxNavIcons);
 
 });
