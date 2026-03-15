@@ -248,7 +248,9 @@ document.addEventListener("DOMContentLoaded", function () {
             country7: "Güney Danimarka",
             countryNote: "Özellikle Almanya hattında güçlü acentelik bağları ile hızlı ve güvenilir çözümler sunmaktayız.",
 
+            footerCompany: "FORA ULUSLARARASI TAS.LOJ.HIZM.TIC.LTD.STI",
             footerText: "© 2026 Foralog. Tüm hakları saklıdır.",
+            footerDesigner: "Tasarlayan Furkan YILDIRIM",
 
             // SERVICES HERO
             servicesHeroTitle: "Hizmetlerimiz",
@@ -348,7 +350,9 @@ document.addEventListener("DOMContentLoaded", function () {
             country7: "Southern Denmark",
             countryNote: "Especially on the Germany route, we provide fast and reliable solutions.",
 
+            footerCompany: "FORA ULUSLARARASI TAS.LOJ.HIZM.TIC.LTD.STI",
             footerText: "© 2026 Foralog. All rights reserved.",
+            footerDesigner: "Designed by Furkan YILDIRIM",
 
             servicesHeroTitle: "Our Services",
             servicesHeroDesc: "The key difference in our transportation services is our double-deck vehicle fleet.",
@@ -440,7 +444,9 @@ document.addEventListener("DOMContentLoaded", function () {
             country7: "Süddänemark",
             countryNote: "Besonders auf der Deutschland-Route bieten wir schnelle und zuverlässige Lösungen.",
 
+            footerCompany: "FORA ULUSLARARASI TAS.LOJ.HIZM.TIC.LTD.STI",
             footerText: "© 2026 Foralog. Alle Rechte vorbehalten.",
+            footerDesigner: "Design von Furkan YILDIRIM",
 
             servicesHeroTitle: "Unsere Dienstleistungen",
             servicesHeroDesc: "Der wichtigste Unterschied unserer Transportdienste ist unsere Doppeldeck-Fahrzeugflotte.",

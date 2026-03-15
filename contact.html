@@ -27,12 +27,10 @@
             <a href="services.html" data-key="navServices">Hizmetler</a>
             <a href="contact.html" data-key="navContact">İletişim</a>
 
-            <!-- Mobil Dil Butonu -->
-            <div class="lang-switch" id="lang-switch">TR</div>
+            <div class="lang-switch mobile-lang" id="lang-switch">TR</div>
         </nav>
 
-        <!-- Desktop Dil Butonu -->
-        <div class="lang-switch" id="lang-switch-desktop">TR</div>
+        <div class="lang-switch desktop-lang" id="lang-switch-desktop">TR</div>
 
     </div>
 </header>
@@ -107,8 +105,18 @@
     </div>
 </section>
 
-<footer>
-    <p data-key="footerText">© 2026 Foralog. Tüm hakları saklıdır.</p>
+<footer class="site-footer">
+    <div class="container footer-container">
+        <div class="footer-brand">
+            <img src="assets/images/logo.png" alt="Foralog Logo" class="footer-logo">
+            <div class="footer-copy">
+                <strong>Foralog</strong>
+                <p class="footer-company" data-key="footerCompany">FORA ULUSLARARASI TAS.LOJ.HIZM.TIC.LTD.STI</p>
+                <p data-key="footerText">© 2026 Foralog. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+        <p class="footer-designer" data-key="footerDesigner">Tasarlayan Furkan Yıldırım</p>
+    </div>
 </footer>
 
 <script src="assets/js/script.js"></script>
