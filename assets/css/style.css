@@ -1665,6 +1665,44 @@ html, body {
     box-shadow: 0 20px 42px rgba(234,88,12,0.3);
 }
 
+.service-shortcut-pill {
+    position: absolute;
+    right: 74px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 11px 16px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.94);
+    color: #9a3412;
+    font-size: 0.86rem;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 14px 32px rgba(15,23,42,0.14);
+    border: 1px solid rgba(249,115,22,0.14);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-50%) translateX(10px) scale(0.96);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.service-shortcut-pill::after {
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background: rgba(255,255,255,0.94);
+    border-top: 1px solid rgba(249,115,22,0.14);
+    border-right: 1px solid rgba(249,115,22,0.14);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.service-shortcut-button.visible .service-shortcut-pill {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0) scale(1);
+}
+
 .service-shortcut-button::before {
     content: "";
     position: absolute;
@@ -1761,6 +1799,16 @@ html, body {
         width: 52px;
         height: 52px;
         font-size: 0.82rem;
+    }
+
+    .service-shortcut-pill {
+        right: 62px;
+        padding: 10px 13px;
+        font-size: 0.78rem;
+        max-width: 132px;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.2;
     }
 
     .scroll-to-top {

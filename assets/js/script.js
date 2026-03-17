@@ -355,6 +355,7 @@ document.addEventListener("DOMContentLoaded", function () {
             footerText: "© 2026 Foralog. All rights reserved.",
             footerDesigner: "Designed by Furkan YILDIRIM",
             serviceIntroBtn: "Explore",
+            shortcutCardLabel: "Double Deck System",
 
             servicesHeroTitle: "Our Services",
             servicesHeroDesc: "The key difference in our transportation services is our double-deck vehicle fleet.",
@@ -450,6 +451,7 @@ document.addEventListener("DOMContentLoaded", function () {
             footerText: "© 2026 Foralog. Alle Rechte vorbehalten.",
             footerDesigner: "Design von Furkan YILDIRIM",
             serviceIntroBtn: "Entdecken",
+            shortcutCardLabel: "Doppeldeck-System",
 
             servicesHeroTitle: "Unsere Dienstleistungen",
             servicesHeroDesc: "Der wichtigste Unterschied unserer Transportdienste ist unsere Doppeldeck-Fahrzeugflotte.",
@@ -592,12 +594,31 @@ document.addEventListener("DOMContentLoaded", function () {
     let serviceShortcutButton = null;
 
     if (currentPage === "index.html") {
+        const shortcutTranslations = {
+            tr: "İkinci Kat Sistemi",
+            en: "Double Deck System",
+            de: "Doppeldeck-System"
+        };
         serviceShortcutButton = document.createElement("button");
         serviceShortcutButton.className = "service-shortcut-button";
         serviceShortcutButton.type = "button";
         serviceShortcutButton.setAttribute("aria-label", "İkinci kat sistemi kartina git");
-        serviceShortcutButton.textContent = "2K";
+        serviceShortcutButton.innerHTML = '<span class="service-shortcut-pill"></span><span class="service-shortcut-code">2K</span>';
         document.body.appendChild(serviceShortcutButton);
+
+        function updateShortcutButtonLabel() {
+            const activeLang = localStorage.getItem("lang") || "tr";
+            const shortcutLabel = serviceShortcutButton.querySelector(".service-shortcut-pill");
+
+            if (shortcutLabel) {
+                shortcutLabel.textContent = shortcutTranslations[activeLang] || shortcutTranslations.tr;
+            }
+        }
+
+        updateShortcutButtonLabel();
+
+        document.getElementById("lang-switch")?.addEventListener("click", updateShortcutButtonLabel);
+        document.getElementById("lang-switch-desktop")?.addEventListener("click", updateShortcutButtonLabel);
 
         serviceShortcutButton.addEventListener("click", function () {
             document.body.classList.add("page-transition-out");
