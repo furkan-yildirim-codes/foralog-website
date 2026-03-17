@@ -254,6 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
             footerContactBtn: "Bize Ulaşın",
             footerKvkkBtn: "KVKK Politikası",
             footerPrivacyBtn: "Gizlilik Politikası",
+            footerCookieBtn: "Çerez Politikası",
             serviceIntroBtn: "Tanıyalım",
 
             // SERVICES HERO
@@ -330,6 +331,17 @@ document.addEventListener("DOMContentLoaded", function () {
             privacyText4: "Şirketimiz, kişisel verileri üçüncü şahıslarla ticari amaçla paylaşmaz, satmaz veya devretmez.",
             privacyText5: "Web sitemizde üçüncü taraf bağlantılar (örneğin Google Haritalar) bulunabilir. Bu hizmetlerin gizlilik uygulamalarından ilgili üçüncü taraflar sorumludur.",
             privacyText6: "Gizlilik politikamız zaman zaman güncellenebilir. Güncel versiyon her zaman web sitemizde yayınlanır.",
+            cookieHeroTitle: "Çerez Politikası",
+            cookieHeroDesc: "Web sitemizde kullanılan çerezlere ilişkin bilgilendirme metni.",
+            cookieTitle: "Çerez Politikası",
+            cookieText1: "Web sitemiz, kullanıcı deneyimini geliştirmek ve site performansını analiz etmek amacıyla çerezler kullanabilir.",
+            cookieText2: "Çerezler, ziyaret ettiğiniz web sitesi tarafından tarayıcınız aracılığıyla cihazınıza kaydedilen küçük metin dosyalarıdır.",
+            cookieText3: "Sitemizde kullanılan çerezler;",
+            cookieItem1: "Zorunlu çerezler (site işleyişi için gerekli),",
+            cookieItem2: "Analitik çerezler (ziyaretçi istatistikleri için)",
+            cookieText4: "amaçlarıyla sınırlıdır.",
+            cookieText5: "Ayrıca Google Haritalar gibi üçüncü taraf hizmetler kendi çerez politikalarını uygulayabilir.",
+            cookieText6: "Tarayıcı ayarlarınız üzerinden çerez kullanımını kısıtlayabilir veya tamamen engelleyebilirsiniz. Ancak bu durumda bazı site özellikleri düzgün çalışmayabilir.",
 
         },
 
@@ -389,6 +401,7 @@ document.addEventListener("DOMContentLoaded", function () {
             footerContactBtn: "Contact Us",
             footerKvkkBtn: "Privacy Notice",
             footerPrivacyBtn: "Privacy Policy",
+            footerCookieBtn: "Cookie Policy",
             serviceIntroBtn: "Explore",
             shortcutCardLabel: "Double Deck System",
 
@@ -459,6 +472,17 @@ document.addEventListener("DOMContentLoaded", function () {
             privacyText4: "Our company does not share, sell, or transfer personal data to third parties for commercial purposes.",
             privacyText5: "Our website may contain third-party links, such as Google Maps. The relevant third parties are responsible for the privacy practices of these services.",
             privacyText6: "Our privacy policy may be updated from time to time. The current version is always published on our website.",
+            cookieHeroTitle: "Cookie Policy",
+            cookieHeroDesc: "Information notice regarding the cookies used on our website.",
+            cookieTitle: "Cookie Policy",
+            cookieText1: "Our website may use cookies to improve user experience and analyze site performance.",
+            cookieText2: "Cookies are small text files stored on your device by the website you visit through your browser.",
+            cookieText3: "The cookies used on our website are limited to;",
+            cookieItem1: "Essential cookies (required for site functionality),",
+            cookieItem2: "Analytics cookies (for visitor statistics)",
+            cookieText4: "these purposes only.",
+            cookieText5: "In addition, third-party services such as Google Maps may apply their own cookie policies.",
+            cookieText6: "You can restrict or completely disable the use of cookies through your browser settings. However, in this case, some site features may not function properly.",
         },
 
 
@@ -517,6 +541,7 @@ document.addEventListener("DOMContentLoaded", function () {
             footerContactBtn: "Kontakt",
             footerKvkkBtn: "Datenschutzhinweis",
             footerPrivacyBtn: "Datenschutzrichtlinie",
+            footerCookieBtn: "Cookie-Richtlinie",
             serviceIntroBtn: "Entdecken",
             shortcutCardLabel: "Doppeldeck-System",
 
@@ -587,6 +612,17 @@ document.addEventListener("DOMContentLoaded", function () {
             privacyText4: "Unser Unternehmen gibt personenbezogene Daten nicht zu kommerziellen Zwecken an Dritte weiter, verkauft sie nicht und überträgt sie nicht.",
             privacyText5: "Unsere Website kann Links zu Drittanbietern enthalten, zum Beispiel zu Google Maps. Für die Datenschutzpraktiken dieser Dienste sind die jeweiligen Drittanbieter verantwortlich.",
             privacyText6: "Unsere Datenschutzrichtlinie kann von Zeit zu Zeit aktualisiert werden. Die aktuelle Version wird stets auf unserer Website veröffentlicht.",
+            cookieHeroTitle: "Cookie-Richtlinie",
+            cookieHeroDesc: "Hinweistext zu den auf unserer Website verwendeten Cookies.",
+            cookieTitle: "Cookie-Richtlinie",
+            cookieText1: "Unsere Website kann Cookies verwenden, um die Benutzererfahrung zu verbessern und die Leistung der Website zu analysieren.",
+            cookieText2: "Cookies sind kleine Textdateien, die von der von Ihnen besuchten Website über Ihren Browser auf Ihrem Gerät gespeichert werden.",
+            cookieText3: "Die auf unserer Website verwendeten Cookies sind beschränkt auf;",
+            cookieItem1: "Notwendige Cookies (für die Funktion der Website erforderlich),",
+            cookieItem2: "Analyse-Cookies (für Besucherstatistiken)",
+            cookieText4: "diese Zwecke.",
+            cookieText5: "Darüber hinaus können Drittanbieterdienste wie Google Maps ihre eigenen Cookie-Richtlinien anwenden.",
+            cookieText6: "Sie können die Verwendung von Cookies über Ihre Browsereinstellungen einschränken oder vollständig deaktivieren. In diesem Fall funktionieren einige Website-Funktionen möglicherweise nicht ordnungsgemäß.",
         }
     };
 
