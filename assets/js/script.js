@@ -253,6 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
             footerDesigner: "Tasarlayan Furkan YILDIRIM",
             footerContactBtn: "Bize Ulaşın",
             footerKvkkBtn: "KVKK Politikası",
+            footerPrivacyBtn: "Gizlilik Politikası",
             serviceIntroBtn: "Tanıyalım",
 
             // SERVICES HERO
@@ -320,6 +321,15 @@ document.addEventListener("DOMContentLoaded", function () {
             kvkkRight4: "İşlemeye itiraz etme",
             kvkkRightsOutro: "haklarına sahipsiniz.",
             kvkkContactText: "Haklarınıza ilişkin taleplerinizi info@foralog.com adresi üzerinden iletebilirsiniz.",
+            privacyHeroTitle: "Gizlilik Politikası",
+            privacyHeroDesc: "Ziyaretçilerimizin gizliliğine ilişkin bilgilendirme metni.",
+            privacyTitle: "Gizlilik Politikası",
+            privacyText1: "Fora Uluslararası Taşımacılık olarak ziyaretçilerimizin gizliliğine önem veriyoruz.",
+            privacyText2: "Web sitemiz, kullanıcıdan doğrudan kişisel veri toplayan bir form veya üyelik sistemi içermemektedir.",
+            privacyText3: "Ziyaret sırasında otomatik olarak elde edilebilecek teknik veriler (IP adresi, tarayıcı bilgisi, ziyaret süresi gibi) yalnızca site güvenliği ve performans analizi amacıyla değerlendirilebilir.",
+            privacyText4: "Şirketimiz, kişisel verileri üçüncü şahıslarla ticari amaçla paylaşmaz, satmaz veya devretmez.",
+            privacyText5: "Web sitemizde üçüncü taraf bağlantılar (örneğin Google Haritalar) bulunabilir. Bu hizmetlerin gizlilik uygulamalarından ilgili üçüncü taraflar sorumludur.",
+            privacyText6: "Gizlilik politikamız zaman zaman güncellenebilir. Güncel versiyon her zaman web sitemizde yayınlanır.",
 
         },
 
@@ -378,6 +388,7 @@ document.addEventListener("DOMContentLoaded", function () {
             footerDesigner: "Designed by Furkan YILDIRIM",
             footerContactBtn: "Contact Us",
             footerKvkkBtn: "Privacy Notice",
+            footerPrivacyBtn: "Privacy Policy",
             serviceIntroBtn: "Explore",
             shortcutCardLabel: "Double Deck System",
 
@@ -439,6 +450,15 @@ document.addEventListener("DOMContentLoaded", function () {
             kvkkRight4: "Object to the processing",
             kvkkRightsOutro: "and exercise your related rights.",
             kvkkContactText: "You may submit your requests regarding your rights via info@foralog.com.",
+            privacyHeroTitle: "Privacy Policy",
+            privacyHeroDesc: "Information notice regarding the privacy of our visitors.",
+            privacyTitle: "Privacy Policy",
+            privacyText1: "As Fora International Transportation, we care about the privacy of our visitors.",
+            privacyText2: "Our website does not include a form or membership system that directly collects personal data from users.",
+            privacyText3: "Technical data that may be obtained automatically during your visit, such as IP address, browser information, and visit duration, may only be evaluated for site security and performance analysis.",
+            privacyText4: "Our company does not share, sell, or transfer personal data to third parties for commercial purposes.",
+            privacyText5: "Our website may contain third-party links, such as Google Maps. The relevant third parties are responsible for the privacy practices of these services.",
+            privacyText6: "Our privacy policy may be updated from time to time. The current version is always published on our website.",
         },
 
 
@@ -496,6 +516,7 @@ document.addEventListener("DOMContentLoaded", function () {
             footerDesigner: "Design von Furkan YILDIRIM",
             footerContactBtn: "Kontakt",
             footerKvkkBtn: "Datenschutzhinweis",
+            footerPrivacyBtn: "Datenschutzrichtlinie",
             serviceIntroBtn: "Entdecken",
             shortcutCardLabel: "Doppeldeck-System",
 
@@ -557,6 +578,15 @@ document.addEventListener("DOMContentLoaded", function () {
             kvkkRight4: "Der Verarbeitung zu widersprechen",
             kvkkRightsOutro: "und die damit verbundenen Rechte auszuüben.",
             kvkkContactText: "Sie können Ihre Anträge bezüglich Ihrer Rechte über info@foralog.com einreichen.",
+            privacyHeroTitle: "Datenschutzrichtlinie",
+            privacyHeroDesc: "Hinweistext zum Schutz der Privatsphäre unserer Besucher.",
+            privacyTitle: "Datenschutzrichtlinie",
+            privacyText1: "Als Fora Internationale Spedition legen wir großen Wert auf die Privatsphäre unserer Besucher.",
+            privacyText2: "Unsere Website enthält weder ein Formular noch ein Mitgliedschaftssystem, über das direkt personenbezogene Daten von Nutzern erhoben werden.",
+            privacyText3: "Technische Daten, die während Ihres Besuchs automatisch erfasst werden können, wie IP-Adresse, Browserinformationen und Besuchsdauer, werden ausschließlich zur Sicherheit der Website und zur Leistungsanalyse ausgewertet.",
+            privacyText4: "Unser Unternehmen gibt personenbezogene Daten nicht zu kommerziellen Zwecken an Dritte weiter, verkauft sie nicht und überträgt sie nicht.",
+            privacyText5: "Unsere Website kann Links zu Drittanbietern enthalten, zum Beispiel zu Google Maps. Für die Datenschutzpraktiken dieser Dienste sind die jeweiligen Drittanbieter verantwortlich.",
+            privacyText6: "Unsere Datenschutzrichtlinie kann von Zeit zu Zeit aktualisiert werden. Die aktuelle Version wird stets auf unserer Website veröffentlicht.",
         }
     };
 
