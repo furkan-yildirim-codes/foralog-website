@@ -1,4 +1,4 @@
-// =============================
+﻿// =============================
 // NAVBAR & HAMBURGER
 // =============================
 document.addEventListener("DOMContentLoaded", function () {
@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function () {
             service3Desc: "Avrupa rotalarında güçlü operasyon ağı ve zamanında teslimat.",
 
             // WHY US
-            whyTitle: "Neden Fora Lojistik?",
+            whyTitle: "Neden Fora Taşımacılık?",
             why1Title: "25+ Yıl Deneyim",
             why1Desc: "2000 yılından bu yana uluslararası taşımacılık tecrübesi.",
             why2Title: "Avrupa Uzmanlığı",
@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", function () {
             service3Title: "European Route Expertise",
             service3Desc: "Strong operational network and on-time delivery on European routes.",
 
-            whyTitle: "Why Fora Logistics?",
+            whyTitle: "Why Fora Transportation?",
             why1Title: "25+ Years of Experience",
             why1Desc: "International transportation expertise since 2000.",
             why2Title: "European Expertise",
@@ -505,7 +505,7 @@ document.addEventListener("DOMContentLoaded", function () {
             service3Title: "Europa-Routen Expertise",
             service3Desc: "Starkes Betriebsnetz und pünktliche Lieferung auf europäischen Routen.",
 
-            whyTitle: "Warum Fora Logistik?",
+            whyTitle: "Warum Fora Transport?",
             why1Title: "Über 25 Jahre Erfahrung",
             why1Desc: "Internationale Transporterfahrung seit 2000.",
             why2Title: "Europa-Expertise",
