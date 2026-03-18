@@ -164,7 +164,7 @@ body.language-transition [data-key] {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0,0,0,0.20);
     z-index: 1;
 }
 
@@ -1199,6 +1199,11 @@ body.language-transition [data-key] {
 
 .hero h1 {
     color: #ea580c;
+    text-shadow:
+        0 3px 8px rgba(0,0,0,0.42),
+        0 14px 30px rgba(0,0,0,0.34),
+        0 0 1px rgba(255,255,255,0.24),
+        1px 1px 0 rgba(120,53,15,0.28);
 }
 
 .services-detail-section {
