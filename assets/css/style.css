@@ -1586,18 +1586,20 @@ html, body {
 
 .lang-switch {
     margin-left: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    color: #ea580c;
-    border: 2px solid #ea580c;
-    padding: 5px 10px;
-    border-radius: 6px;
-    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 999px;
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    box-shadow: 0 10px 24px rgba(234,88,12,0.22), inset 0 1px 0 rgba(255,255,255,0.16);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
 .lang-switch:hover {
-    background: #ea580c;
-    color: white;
+    filter: brightness(1.03);
+    box-shadow: 0 14px 28px rgba(234,88,12,0.28), inset 0 1px 0 rgba(255,255,255,0.16);
 }
 
 .lang-switch.switching {
@@ -1610,10 +1612,8 @@ html, body {
         box-shadow: 0 0 0 rgba(234,88,12,0);
     }
     40% {
-        transform: scale(0.92) rotate(-8deg);
-        box-shadow: 0 0 0 8px rgba(234,88,12,0.12);
-        background: #ea580c;
-        color: white;
+        transform: scale(0.96);
+        box-shadow: 0 0 0 8px rgba(255,255,255,0.08);
     }
     100% {
         transform: scale(1) rotate(0deg);
@@ -1621,9 +1621,34 @@ html, body {
     }
 }
 
+.lang-switch-option {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: rgba(255,255,255,0.88);
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1;
+    min-width: 36px;
+    padding: 8px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lang-switch-option:hover {
+    color: #ffffff;
+}
+
+.lang-switch-option.is-active {
+    background: #ffffff;
+    color: #ea580c;
+    box-shadow: 0 3px 10px rgba(15,23,42,0.12);
+}
+
 /* Varsayılan: Desktop */
 .desktop-lang {
-    display: block;
+    display: inline-flex;
 }
 
 .mobile-lang {
@@ -1638,15 +1663,15 @@ html, body {
     }
 
     .mobile-lang {
-        display: block;
+        display: inline-flex;
         margin: 20px auto 0 auto;
-        width: 80%;
+        width: fit-content;
         text-align: center;
     }
 }
 
 #nav-menu .lang-switch {
-    width: 80%;
+    width: fit-content;
     margin: 20px auto 0 auto;
     text-align: center;
     display: none;
@@ -1659,7 +1684,7 @@ html, body {
     }
 
     #nav-menu .lang-switch {
-        display: block;
+        display: inline-flex;
         margin-top: 20px;
         text-align: center;
     }

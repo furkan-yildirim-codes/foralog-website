@@ -629,9 +629,36 @@ document.addEventListener("DOMContentLoaded", function () {
     const langSwitchMobile = document.getElementById("lang-switch");
     const langSwitchDesktop = document.getElementById("lang-switch-desktop");
     const heroTitle = document.querySelector('[data-key="heroTitle"]');
+    const supportedLanguages = ["tr", "en", "de"];
 
     let currentLang = localStorage.getItem("lang") || "tr";
+    if (!supportedLanguages.includes(currentLang)) currentLang = "tr";
     let heroTypingTimeout;
+
+    function renderLanguageSwitch(container) {
+        if (!container) return;
+
+        container.innerHTML = supportedLanguages.map(lang => `
+            <button
+                type="button"
+                class="lang-switch-option"
+                data-lang="${lang}"
+                aria-pressed="false"
+            >${lang.toUpperCase()}</button>
+        `).join("");
+    }
+
+    function syncLanguageButtons(lang) {
+        [langSwitchMobile, langSwitchDesktop].forEach(container => {
+            if (!container) return;
+
+            container.querySelectorAll(".lang-switch-option").forEach(button => {
+                const isActive = button.dataset.lang === lang;
+                button.classList.toggle("is-active", isActive);
+                button.setAttribute("aria-pressed", String(isActive));
+            });
+        });
+    }
 
     function animateLanguageButtons() {
         [langSwitchMobile, langSwitchDesktop].forEach(button => {
@@ -681,8 +708,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.remove("lang-tr", "lang-en", "lang-de");
         document.body.classList.add("lang-" + lang);
 
-        if (langSwitchMobile) langSwitchMobile.textContent = lang.toUpperCase();
-        if (langSwitchDesktop) langSwitchDesktop.textContent = lang.toUpperCase();
+        syncLanguageButtons(lang);
 
         if (translations[lang] && translations[lang].heroTitle) {
             typeHeroTitle(translations[lang].heroTitle);
@@ -691,18 +717,24 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("lang", lang);
     }
 
-    function toggleLanguage() {
-        if (currentLang === "tr") currentLang = "en";
-        else if (currentLang === "en") currentLang = "de";
-        else currentLang = "tr";
+    function handleLanguageSelection(event) {
+        const button = event.target.closest(".lang-switch-option");
+        if (!button) return;
 
+        const nextLang = button.dataset.lang;
+        if (!nextLang || nextLang === currentLang) return;
+
+        currentLang = nextLang;
         animateLanguageButtons();
         animateLanguageTransition();
         updateLanguage(currentLang);
     }
 
-    if (langSwitchMobile) langSwitchMobile.addEventListener("click", toggleLanguage);
-    if (langSwitchDesktop) langSwitchDesktop.addEventListener("click", toggleLanguage);
+    renderLanguageSwitch(langSwitchMobile);
+    renderLanguageSwitch(langSwitchDesktop);
+
+    if (langSwitchMobile) langSwitchMobile.addEventListener("click", handleLanguageSelection);
+    if (langSwitchDesktop) langSwitchDesktop.addEventListener("click", handleLanguageSelection);
 
     updateLanguage(currentLang);
 
