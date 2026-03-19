@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
             serviceDetail3_2: "İkinci kat sistemi ile araç tabanı ve üst kat ayrı ayrı değerlendirilerek fiyat avantajı sağlanır.",
 
             // DETAIL 4
-            serviceDetail4Title: "Yükünüz Hassas veya Üst Üste Binir mi?",
+            serviceDetail4Title: "Yükünüz hassas ve üst üste yüklenmiyor mu?",
             serviceDetail4_1: "Paletli ve hassas yüklerde ikinci kat sayesinde ezilme riski ortadan kaldırılır.",
             serviceDetail4_2: "Boş kalan alanlar diğer yüklerle değerlendirilerek müşteriye maliyet avantajı sunulur.",
 
@@ -290,10 +290,10 @@ document.addEventListener("DOMContentLoaded", function () {
             serviceDetail5_2: "Bu sayede zaman kaybı ve depo maliyetleri minimize edilir.",
 
             // DETAIL 6
-            serviceDetail6Title: "Yurt Dışına Taşınma Hizmeti",
-            serviceDetail6_1: "Türkiye’den yeni mobilyalarınızı özenle yüklüyoruz.",
-            serviceDetail6_2: "İhracat ve Almanya giriş gümrük işlemlerini gerçekleştiriyoruz.",
-            serviceDetail6_3: "Mobilyalarınızı Avrupa’daki adresinize teslim ediyoruz.",
+            serviceDetail6Title: "İhracat Parsiyel Taşıma Hizmeti",
+            serviceDetail6_1: "İhracattaki parsiyel yüklerinizi özenle taşıyoruz.",
+            serviceDetail6_2: "Almanya giriş gümrük işlemlerini gerçekleştiriyoruz.",
+            serviceDetail6_3: "Parsiyel yüklerinizi 7-9 gün içerisinde adrese teslim ediyoruz.",
 
             contactHeroTitle: "İletişim",
             contactHeroDesc: "Bizimle iletişime geçin. Size en kısa sürede dönüş yapalım.",
@@ -423,7 +423,7 @@ document.addEventListener("DOMContentLoaded", function () {
             serviceDetail3_1: "For light but bulky loads, pricing is calculated based on volumetric weight.",
             serviceDetail3_2: "The double-deck system allows separate evaluation of lower and upper decks, providing price advantage.",
 
-            serviceDetail4Title: "Is Your Load Fragile or Stackable?",
+            serviceDetail4Title: "Is your load fragile and not stackable?",
             serviceDetail4_1: "For palletized and fragile goods, the second deck eliminates crushing risk.",
             serviceDetail4_2: "Unused spaces are optimized with other loads, offering cost efficiency.",
 
@@ -431,10 +431,10 @@ document.addEventListener("DOMContentLoaded", function () {
             serviceDetail5_1: "The double-deck system ensures that loads from different customers do not block each other.",
             serviceDetail5_2: "This minimizes time loss and warehouse costs.",
 
-            serviceDetail6Title: "International Relocation Service",
-            serviceDetail6_1: "We carefully load your new furniture from Turkey.",
-            serviceDetail6_2: "We handle export and German customs procedures.",
-            serviceDetail6_3: "We deliver your furniture to your address in Europe.",
+            serviceDetail6Title: "Export Groupage Transport Service",
+            serviceDetail6_1: "We carefully transport your export groupage shipments.",
+            serviceDetail6_2: "We handle German import customs procedures.",
+            serviceDetail6_3: "We deliver your groupage shipments to the address within 7-9 days.",
 
             contactHeroTitle: "Contact",
             contactHeroDesc: "Get in touch with us. We will get back to you as soon as possible.",
@@ -563,7 +563,7 @@ document.addEventListener("DOMContentLoaded", function () {
             serviceDetail3_1: "Bei leichten, aber voluminösen Gütern erfolgt die Berechnung nach Volumengewicht.",
             serviceDetail3_2: "Durch getrennte Nutzung von Unter- und Oberdeck entsteht ein Preisvorteil.",
 
-            serviceDetail4Title: "Ist Ihre Ladung empfindlich oder stapelbar?",
+            serviceDetail4Title: "Ist Ihre Ladung empfindlich und nicht stapelbar?",
             serviceDetail4_1: "Die zweite Ebene verhindert das Zerdrücken empfindlicher Güter.",
             serviceDetail4_2: "Freie Flächen werden optimal genutzt und bieten Kosteneffizienz.",
 
@@ -571,10 +571,10 @@ document.addEventListener("DOMContentLoaded", function () {
             serviceDetail5_1: "Das Doppeldeck-System verhindert, dass sich Kundenladungen gegenseitig blockieren.",
             serviceDetail5_2: "Dadurch werden Zeit- und Lagerkosten minimiert.",
 
-            serviceDetail6Title: "Umzugsservice ins Ausland",
-            serviceDetail6_1: "Wir laden Ihre neuen Möbel sorgfältig in der Türkei.",
-            serviceDetail6_2: "Wir übernehmen Export- und deutsche Zollabwicklung.",
-            serviceDetail6_3: "Wir liefern Ihre Möbel an Ihre Adresse in Europa.",
+            serviceDetail6Title: "Export-Teilladungsservice",
+            serviceDetail6_1: "Wir transportieren Ihre Teilladungen mit Sorgfalt.",
+            serviceDetail6_2: "Wir übernehmen die Zollformalitäten für die Einreise nach Deutschland.",
+            serviceDetail6_3: "Wir liefern Ihre Teilladungen innerhalb von 7-9 Tagen an Ihre Adresse.",
 
             contactHeroTitle: "Kontakt",
             contactHeroDesc: "Kontaktieren Sie uns. Wir melden uns schnellstmöglich bei Ihnen.",
