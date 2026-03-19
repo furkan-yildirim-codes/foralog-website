@@ -494,11 +494,11 @@ document.addEventListener("DOMContentLoaded", function () {
             navContact: "Kontakt",
 
             heroTitle: "Zuverlässiger Transport nach Europa seit 2000",
-            heroDesc: "Mit über 25 Jahren Erfahrung im internationalen Straßentransport bieten wir pünktliche und zuverlässige Logistiklösungen.",
+            heroDesc: "Mit über 25 Jahren Erfahrung im internationalen Transport bieten wir pünktliche und zuverlässige Logistiklösungen.",
             offerBtn: "Angebot Anfordern",
 
             servicesTitle: "Unsere Dienstleistungen",
-            service1Title: "Internationaler Straßentransport",
+            service1Title: "Internationaler Transport",
             service1Desc: "Regelmäßige und sichere Transportdienste in europäische Länder.",
             service2Title: "Inlandstransport",
             service2Desc: "Schnelle und gut geplante Logistikoperationen in der Türkei.",
@@ -514,9 +514,9 @@ document.addEventListener("DOMContentLoaded", function () {
             why3Desc: "Transparente und strukturierte Logistikprozesse mit Fokus auf Kundenzufriedenheit.",
 
             aboutHeroTitle: "Über Uns",
-            aboutHeroDesc: "Ihr zuverlässiger Partner im internationalen Straßentransport seit 2000.",
+            aboutHeroDesc: "Ihr zuverlässiger Partner im internationalen Transport seit 2000.",
             aboutTitle: "Unsere Geschichte",
-            aboutText1: "Im Jahr 2000 gegründet, starteten wir mit einem erfahrenen Team im internationalen Straßentransport.",
+            aboutText1: "Im Jahr 2000 gegründet, starteten wir mit einem erfahrenen Team im internationalen Transport.",
             aboutText2: "Wir arbeiten mit einem Boutique-Ansatz und einer speziellen Doppeldecker-Flotte.",
             aboutText3: "Zur Qualitätssicherung werden ausschließlich FORA-Fahrzeuge eingesetzt.",
             aboutText4: "Wir verwalten den gesamten internationalen Logistikprozess von Anfang bis Ende.",
