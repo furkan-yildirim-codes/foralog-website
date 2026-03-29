@@ -382,11 +382,13 @@ body.language-transition [data-key] {
 }
 
 .footer-designer {
+    display: inline-block;
     padding: 12px 18px;
     border-radius: 999px;
     border: 1px solid rgba(255,244,214,0.45);
     background: rgba(120,53,15,0.26);
     color: #fff4d6;
+    text-decoration: none;
     backdrop-filter: blur(8px);
     white-space: nowrap;
     transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
@@ -848,6 +850,13 @@ body.language-transition [data-key] {
     font-size: 22px;
     background: rgba(249,115,22,0.1);
     border-radius: 14px;
+}
+
+.contact-box .whatsapp-icon svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    transform: translateX(1px);
 }
 
 .contact-box strong {
